@@ -37,6 +37,13 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  #파이토치에서 사용
+  pytorch_lite: ^4.2.5
+  image_picker: ^1.0.8
+
+  #텐서플로우라이트에서 사용
+  tflite_flutter: ^0.10.4
+
   flutter_test:
     sdk: flutter
 
@@ -59,9 +66,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/tflite_flutter/
+    - assets/pytorch_lite/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
