@@ -115,14 +115,14 @@ import '../widget/drawing_canvas.dart';
 import '../widget/prediction.dart';
 import '../widget/recogniger.dart';
 
-class DrawScreen extends StatefulWidget {
-  const DrawScreen({Key? key}) : super(key: key);
+class tflite_flutter extends StatefulWidget {
+  const tflite_flutter({Key? key}) : super(key: key);
 
   @override
-  State<DrawScreen> createState() => _DrawScreenState();
+  State<tflite_flutter> createState() => _tflite_flutterState();
 }
 
-class _DrawScreenState extends State<DrawScreen> {
+class _tflite_flutterState extends State<tflite_flutter> {
   final _points = <Offset?>[];
   final _recognizer = Recognizer();
   var _prediction = <Prediction>[];
@@ -137,31 +137,11 @@ class _DrawScreenState extends State<DrawScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Digit Recognizer'),
+        title: Text('tflite_flutter'),
       ),
       body: Column(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: const <Widget>[
-                      Text(
-                        'MNIST database of handwritten digits',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        'The digits have been size-normalized and centered in a fixed-size images (28 x 28)',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              _mnistPreviewImage(),
-            ],
-          ),
+          _mnistPreviewImage(),
           const SizedBox(height: 10),
           Container(
             width: Constants.canvasSize + Constants.borderSize * 2,

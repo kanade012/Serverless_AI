@@ -28,7 +28,7 @@ class MainPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => RunModelByImageDemo())),
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Pytorch_lite())),
               child: Container(
                 padding: const EdgeInsets.all(16.0),
                 width: ratio.width * 300,
@@ -50,7 +50,7 @@ class MainPage extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => DrawScreen())),              child: Container(
+              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => tflite_flutter())),              child: Container(
                 padding: const EdgeInsets.all(16.0),
                 width: ratio.width * 300,
                 height: ratio.height * 150,

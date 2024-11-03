@@ -6,14 +6,14 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 import 'package:pytorch_lite/pytorch_lite.dart';
 
-class RunModelByImageDemo extends StatefulWidget {
-  const RunModelByImageDemo({Key? key}) : super(key: key);
+class Pytorch_lite extends StatefulWidget {
+  const Pytorch_lite({Key? key}) : super(key: key);
 
   @override
-  _RunModelByImageDemoState createState() => _RunModelByImageDemoState();
+  _Pytorch_liteState createState() => _Pytorch_liteState();
 }
 
-class _RunModelByImageDemoState extends State<RunModelByImageDemo> {
+class _Pytorch_liteState extends State<Pytorch_lite> {
   ClassificationModel? _imageModel;
   late ModelObjectDetection _objectModelYoloV8;
 
@@ -80,7 +80,6 @@ class _RunModelByImageDemoState extends State<RunModelByImageDemo> {
     }
 
     setState(() {
-      //this.objDetect = objDetect;
       _image = File(image.path);
     });
   }
@@ -107,7 +106,6 @@ class _RunModelByImageDemoState extends State<RunModelByImageDemo> {
 
     print(predictionList);
     setState(() {
-      //this.objDetect = objDetect;
       _image = File(image.path);
     });
   }
@@ -115,7 +113,7 @@ class _RunModelByImageDemoState extends State<RunModelByImageDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Run model with Image'),
+          title: const Text('Pytorch_lite'),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
