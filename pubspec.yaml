@@ -42,7 +42,7 @@ dev_dependencies:
   image_picker: ^1.0.8
 
   #텐서플로우라이트에서 사용
-  tflite_flutter: ^0.10.4
+  tflite_flutter: ^0.11.0
 
   flutter_test:
     sdk: flutter

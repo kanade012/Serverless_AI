@@ -88,6 +88,7 @@ class _Pytorch_liteState extends State<Pytorch_lite> {
       "Inference Took ${stopwatch.elapsed.inMilliseconds} ms";
 
   Future runClassification() async {
+    objDetect = [];
     final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
     //get prediction
     print(image!.path);
