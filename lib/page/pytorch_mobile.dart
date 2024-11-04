@@ -88,11 +88,8 @@ class _Pytorch_liteState extends State<Pytorch_lite> {
       "Inference Took ${stopwatch.elapsed.inMilliseconds} ms";
 
   Future runClassification() async {
-    objDetect = [];
-    //pick a random image
     final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
     //get prediction
-    //labels are 1000 random english words for show purposes
     print(image!.path);
     Stopwatch stopwatch = Stopwatch()..start();
 
